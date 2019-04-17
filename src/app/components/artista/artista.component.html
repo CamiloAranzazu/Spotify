@@ -1,0 +1,16 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading" class="row animated fadeIn fast">
+    <div class="col-2">
+        <img [src]="artistaBusqueda.images | noimagen" class="d-block img-circle img-thumbnail ">
+    </div>
+    <div class="col">
+        <h3>{{artistaBusqueda.name}}</h3>
+        <p>
+            <a [href]="artistaBusqueda.external_urls.spotify" target="_b">Ir a la pagina de {{artistaBusqueda.name}}</a>
+        </p>
+    </div>
+    <div class="col-4">
+        <a class="badge badge-success" [routerLink]="['/home']"> Home</a>
+        <a class="badge badge-success" [routerLink]="['/buscar']"> Buscar Artistas</a>
+    </div>
+</div>
